@@ -1,0 +1,284 @@
+.IntroImg{
+    transition: linear 1s;
+    transition : all 0.05s;       /*[3]*/
+    transition-timing-function : cubic-bezier(0.1,2.7,0.58,1);  /*[4]*/
+  }
+
+.whiteFont{
+  color : white;
+}
+.middleFont{
+  color : #d6d6d6;  
+}
+.smallFont{
+  color : #888888;
+}
+
+.Title{
+  padding-bottom : 5px;
+}
+.skill-progress{
+  width: 100%;
+  padding: 10px;
+  background-color: #4D4D4D;
+  border-radius: 10px;
+  color : #fff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.089);
+}
+.SkillDiv{
+  height: 500px;
+  width : 100%;
+
+  background-color: #4D4D4D;
+}
+.Skill{
+  font-size: 1.2em;
+}
+
+.Skillmini{
+  font-size: 1em;
+}
+
+.item p{
+  overflow: hidden;
+  margin-bottom : 0;
+
+}
+
+
+/* item에 마우스 올리면 커지게 함 */
+.item {
+  transition: 0.4s;
+
+}
+.item:hover {
+  border-radius: 3px;
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.753);
+  transform: scale(1.05);
+}
+
+
+/* p태그안에 있는 span을 왼쪽, 오른쪽 정렬을 시켜야함 */
+.item p span:nth-child(1){  /*span:first-child*/
+  float : left;
+  
+
+}
+.item p span:nth-child(2){ /*span:end-child*/
+  float: right;
+
+}
+
+.progress{
+  border : 1px solid #6cd4c4;
+  padding : 5px;
+  border-radius: 3px;
+}
+
+/* 그라데이션 막대 */
+.progress-level{
+  height: 5px;
+  background : linear-gradient(to right, pink, gold); /*방향(deg각도도 가능), 시작색상, 종료색상*/
+  animation: ani;
+  animation-duration: 1s;  /*1초만에 발생한 애니메이션이 끝나게 함*/
+  animation-fill-mode: both; 
+
+}
+
+/* 처음 로드될 때, 그라데이션바들이 서서히 차오르는 애니메이션 주기 */
+@keyframes ani{
+  0%{
+      width: 0;   /*시작할 때만 width가 0이게만 하면 됨*/
+  }
+}
+
+.skill-progress .item:nth-of-type(1) .progress-level{
+  animation-delay: 0s;
+}
+.skill-progress .item:nth-of-type(2) .progress-level{
+  animation-delay: 0.2s;
+}
+.skill-progress .item:nth-of-type(3) .progress-level{
+  animation-delay: 0.4s;
+}
+.skill-progress .item:nth-of-type(4) .progress-level{
+  animation-delay: 0.6s;
+}
+
+/* 글자에 마우스 올리면 커지게 함 */
+.Textitem {
+  transition: 0.4s;
+
+
+}
+.Textitem:hover {
+  border-radius: 3px;
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.753);
+  transform: scale(1.05);
+}
+
+/* 버튼에 마우스 올리면 커지게 함 */
+.Btnitem {
+  transition: 0.4s;
+
+}
+.Btnitem:hover {
+  border-radius: 3px;
+  background-color : #74EEE8;
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.553);
+  transform: scale(1.05);
+}
+
+.Line{
+  border : 1px solid rgb(97, 97, 97); 
+  margin : 0px 10px;
+}
+
+.FontSize{
+  font-size: 1em;
+  line-height:20px;
+}
+
+/* fadeIn */
+.FadeImage {
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-moz-keyframes fadein { /* Firefox */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-o-keyframes fadein { /* Opera */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+.sns{
+  width : 2em;
+  height: 2em;
+  border-radius: 0.3em;
+  border : 1px solid white;
+  float : left;
+  margin : 3px;
+  background-size: cover;
+  transition: 0.4s;
+  opacity: 0.8;
+}
+.sns:hover{
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.553);
+  opacity: 1;
+}
+
+/* tab */
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: none;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.4s;
+  font-size: 17px;
+}
+.tab button:hover {
+  background-color:  #ffffff;
+}
+.tab button.active {
+  background-color:  #EF7DD8;
+  color : white;
+}
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: none;
+  border-top: none;
+}
+
+
+/* inner tab */
+.grid-container {
+  display: grid;
+  grid-template-columns: 30px auto;
+}
+.tab1 {
+  float: left;
+  width: 60px;
+  height: 300px;
+}
+.tab1 button {
+  display: block;
+  background-color:#6d6d6d;
+  color: black;
+  width: 30px;
+  height : 30px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  font-size: 17px;
+  transition: 0.4s;
+}
+
+.tab1 button:hover {
+  background-color: #6d6d6d;
+}
+.tab1 button.active {
+  background-color: #ffffff;
+}
+
+/* Style the tab content */
+.tabcontent1 {
+  transition: 0.4s;
+  float: left;
+  padding: 0px 12px;
+  width: 100%;
+  border-left: none;
+  height: 430px;
+  display: none;
+}
+
+/* Clear floats after the tab */
+.clearfix1::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* inner tab image */
+.grid-container1 {
+  display: grid;
+  grid-template-columns: auto auto;
+}
